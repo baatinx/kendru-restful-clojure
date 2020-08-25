@@ -7,7 +7,7 @@
                  [compojure "1.6.2"]
                  [ring/ring-core "1.8.1"]
                  [ring/ring-jetty-adapter "1.8.1"]
-                 [ring/ring-mock "0.4.0"]]
+                 [ring/ring-json "0.5.0"]]
 
   :plugins [[lein-ring "0.12.5"]]
 
@@ -17,8 +17,10 @@
          :nrepl {:start? true
                  :host "localhost"
                  :port 9988}}
+  :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+                                  [ring/ring-mock "0.4.0"]]}
+             :uberjar {:aot :all
+                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
 
   :main ^:skip-aot kendru-restful-clojure.core
-  :target-path "target/%s"
-  :profiles {:uberjar {:aot :all
-                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
+  :target-path "target/%s")
