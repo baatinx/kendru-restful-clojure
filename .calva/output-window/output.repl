@@ -16,3 +16,50 @@
 ;      when the cursor is after the last contents at the prompt
 ;   - File URLs in stacktrace frames are peekable and clickable.
 ; Jack-in done.
+
+()
+; Execution error (IllegalAccessError) at kendru-restful-clojure.query/eval25278$loading (form-init10941564984953160113.clj:1).
+; users does not exist
+[{:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:4249" :fn "refer"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:4217" :fn "refer"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 139 :method "applyTo" :flags [:java]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:667" :fn "apply"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:5966" :fn "load-lib"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:5928" :fn "load-lib"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 142 :method "applyTo" :flags [:java]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:667" :fn "apply"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:5985" :fn "load-libs"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:5969" :fn "load-libs"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 137 :method "applyTo" :flags [:java]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:667" :fn "apply"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:6007" :fn "require"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:6007" :fn "require"  :method "doInvoke" :flags [:dup :clj]}
+ {:file "RestFn.java" :line 408 :method "invoke" :flags [:java]}
+ {:file "file:/home/mustafa-basit/Documents/Git@MustafaBasit/Clojure/kendru-restful-clojure/src/kendru_restful_clojure/query.clj:1" :fn "eval25278/loading--auto--"  :method "invoke" :flags [:project :repl :clj]}
+ {:file "file:/home/mustafa-basit/Documents/Git@MustafaBasit/Clojure/kendru-restful-clojure/src/kendru_restful_clojure/query.clj:1" :fn "eval25278"  :method "invokeStatic" :flags [:dup :project :repl :clj]}
+ {:file "file:/home/mustafa-basit/Documents/Git@MustafaBasit/Clojure/kendru-restful-clojure/src/kendru_restful_clojure/query.clj:1" :fn "eval25278"  :method "invoke" :flags [:dup :project :repl :clj]}
+ {:file "Compiler.java" :line 7177 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7166 :method "eval" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 7132 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:368" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/home/mustafa-basit/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::kendru-restful-clojure.core=>
+#'kendru-restful-clojure.db/users
+clj::kendru-restful-clojure.db=>
+nil
+clj::kendru-restful-clojure.query=>
