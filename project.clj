@@ -7,7 +7,12 @@
                  [compojure "1.6.2"]
                  [ring/ring-core "1.8.1"]
                  [ring/ring-jetty-adapter "1.8.1"]
-                 [ring/ring-json "0.5.0"]]
+                 [ring/ring-json "0.5.0"]
+                 [com.novemberain/monger "3.5.0"]
+                 [buddy/buddy-core "1.6.0"]
+                 [buddy/buddy-auth "2.2.0"]
+                 [buddy/buddy-hashers "1.4.0"]
+                 [buddy/buddy-sign "3.1.0"]]
 
   :plugins [[lein-ring "0.12.5"]]
 
