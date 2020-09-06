@@ -9,6 +9,8 @@
                  [ring/ring-jetty-adapter "1.8.1"]
                  [ring/ring-json "0.5.0"]
                  [com.novemberain/monger "3.5.0"]
+                 [cheshire "5.10.0"]
+                 [crypto-random "1.2.0"]
                  [buddy/buddy-core "1.6.0"]
                  [buddy/buddy-auth "2.2.0"]
                  [buddy/buddy-hashers "1.4.0"]
@@ -23,7 +25,8 @@
                  :host "localhost"
                  :port 9988}}
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                                  [ring/ring-mock "0.4.0"]]}
+                                  [ring/ring-mock "0.4.0"]
+                                  [clj-http "3.10.2"]]}
              :uberjar {:aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
 
