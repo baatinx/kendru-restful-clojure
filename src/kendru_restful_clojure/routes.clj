@@ -1,21 +1,23 @@
 (ns kendru-restful-clojure.routes
-  (:require [monger.util :refer [object-id]]
-            [compojure.core :refer [defroutes context GET POST PUT DELETE]]
+  (:require [compojure.core :refer [defroutes context GET POST]]
             [compojure.route :as route]
-            [ring.middleware.json :refer [wrap-json-response wrap-json-body]]
+            [ring.middleware.json :refer [wrap-json-response]]
             [ring.middleware.params :refer [wrap-params]]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
-            [ring.util.response :refer [response]]
-            [kendru-restful-clojure.handler :refer :all]))
+            [buddy.auth.middleware :refer [wrap-authentication wrap-authorization ]]
+            [kendru-restful-clojure.handler :refer [migrate students tokens reset-db-state student inspect-request-map insert-record]]
+            [buddy.auth.accessrules :refer [restrict]]
+            [kendru-restful-clojure.auth :refer [auth-backend authenticate-token user-has-id authenticated-user unauthorized-handler make-token!]]))
 
 (defroutes app-routes
   (GET "/" [] {:content-type "application/json"
                :status 200
                :body {:message "Server Running ..."}})
 
-  (GET "/migrate" [] (migrate))
-  (GET "/students" [] (students))
-  (GET "/reset-coll-state" [] (reset-coll-state))
+  (GET "/migrate" [] migrate)
+  (GET "/students" [] students)
+  (GET "/tokens" [] tokens)
+  (GET "/reset-coll-state" [] reset-db-state)
 
   (GET "/student/:id" [id] (student id))
 
@@ -37,8 +39,15 @@
     (-> (GET "/:id/query-string2" [] inspect-request-map)
         wrap-keyword-params
         wrap-params))
+
+  (GET "/buddy" [] (-> inspect-request-map
+                      (restrict {:handler authenticated-user
+                                 :on-error unauthorized-handler})) )
+
   (route/not-found "not-found"))
 
 (def routes
   (-> app-routes
-      wrap-json-response))
+      wrap-json-response
+      (wrap-authentication auth-backend)
+      (wrap-authorization auth-backend)))

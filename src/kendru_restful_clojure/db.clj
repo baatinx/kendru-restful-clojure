@@ -4,7 +4,7 @@
 
 (def ^:private host "localhost")
 (def ^:private port 27017)
-(def ^:private db-name "restful-clojure")
+(def ^:private db-name "restfulClojureDB")
 (def ^:private username "mustafa-basit")
 (def ^:private password "root")
 

@@ -74,3 +74,5 @@
 ;;     :length 74,
 ;;     :body "{\"_id\":\"5f552976c6da8563047bde88\",\"name\":\"Seerat\",\"age\":\"20\",\"gender\":\"f\"}",
 ;;     :trace-redirects []}
+
+(http/get "http://localhost:8000/buddy" {:authorizaion "RC1ogoEbhD9d27x424oRORCgJp92Z1mTxnRkOwKrqVo"})

@@ -1,8 +1,9 @@
 (ns kendru-restful-clojure.query
   (:require [monger.collection :as mc]
+            [monger.db :refer [drop-db]]
             [monger.util :refer [object-id]]
             [kendru-restful-clojure.db :refer [get-db-ref]]
-            [kendru-restful-clojure.util :refer [docs-object-id->str doc-object-id->str]]))
+            [kendru-restful-clojure.util :refer [docs-object-id->str doc-object-id->str docs-any-key-object-id->str]]))
 
 (def ^:private db (get-db-ref))
 
@@ -23,6 +24,14 @@
            doc-object-id->str)
       nil)))
 
-(defn remove-collection
-  [coll]
-  (mc/remove db coll))
+(defn reset-db-state
+  []
+  (drop-db db))
+
+(defn tokens
+  []
+  (let [coll "authTokens"
+        db db]
+    (-> (mc/find-maps db coll)
+        docs-object-id->str
+        (docs-any-key-object-id->str :user-id))))
